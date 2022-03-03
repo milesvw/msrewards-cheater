@@ -4,7 +4,7 @@ import webbrowser, random, time
 baseurl = "https://www.bing.com/search?q="
 
 # Open 30 tabs searching Bing with a different word each time
-for i in range(30):
+for i in range(32):
     with open("words.txt", "r", encoding="utf-8") as file:
         allText = file.read()
         words = allText.split()
