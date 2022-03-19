@@ -3122,7 +3122,6 @@ butcher
 butchering
 butchers
 butler
-butt
 butter
 buttered
 butterflies
@@ -11267,8 +11266,6 @@ homing
 homogeneity
 homogeneous
 homogenous
-homosexual
-homosexuals
 hon
 honda
 hone
@@ -13614,9 +13611,7 @@ licensee
 licensees
 licenses
 licensing
-lick
 licked
-licking
 licks
 lid
 lido
@@ -21126,7 +21121,6 @@ sewn
 sexes
 sexist
 sexuality
-sexually
 shack
 shackled
 shackles
@@ -25981,10 +25975,8 @@ wedges
 wednesday
 wednesdays
 wee
-weed
 weeded
 weeding
-weeds
 week
 weekday
 weekdays

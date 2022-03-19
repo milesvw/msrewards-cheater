@@ -1,18 +1,41 @@
-import webbrowser, random, time
+import platform, pyautogui, time, random
 
 # Set the base URL to be concatenated with a search word
 baseurl = "https://www.bing.com/search?q="
 
-# Open 30 tabs searching Bing with a different word each time
-for i in range(32):
-    with open("words.txt", "r", encoding="utf-8") as file:
-        allText = file.read()
-        words = allText.split()
-        word = random.choice(words)
-        url = baseurl + word
-        
-        # Open the URL in a new tab in the browser
-        webbrowser.open(url)
+os = platform.system()
+if os == 'Darwin':
+    metakey = 'command' # MacOS
+else:
+    metakey = 'win' # Windows
 
-	    # Give time for the page to load
-        time.sleep(1)
+# Set the meta key for the appropriate operating system
+metakey = "command"
+
+# Open the Edge browser
+pyautogui.hotkey(metakey, 'space', interval=0.05)
+pyautogui.typewrite('edge')
+pyautogui.press('enter')
+
+time.sleep(3) # Give time for the browser to load
+
+for i in range(4):
+    for j in range(8):
+        with open("words.txt", "r", encoding="utf-8") as file:
+            allText = file.read()
+            words = allText.split()
+            word = random.choice(words)
+            url = baseurl + word
+
+        # Open the URL in a new tab
+        pyautogui.hotkey(metakey, 't', interval=0.05)
+        pyautogui.typewrite(url)
+        pyautogui.press('enter')
+
+        time.sleep(1.5) # Give time for the page to load
+    for j in range(8):
+        pyautogui.hotkey(metakey, 'w', interval=0.05)
+
+# Close Microsoft Edge
+pyautogui.hotkey(metakey, 'shift', 'w', interval=0.05)
+pyautogui.hotkey(metakey, 'q', interval=0.05)
