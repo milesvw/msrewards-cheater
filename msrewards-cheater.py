@@ -3,11 +3,14 @@ import platform, pyautogui, time, random
 # Set the base URL to be concatenated with a search word
 baseurl = "https://www.bing.com/search?q="
 
+# Figure out the host system to use the correct keyboard shortcuts
 os = platform.system()
 if os == 'Darwin':
     metakey = 'command' # MacOS
-else:
+elif os == 'Windows':
     metakey = 'win' # Windows
+# else:
+    # Not sure how to do this for Linux yet
 
 # Set the meta key for the appropriate operating system
 metakey = "command"
