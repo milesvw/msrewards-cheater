@@ -16,7 +16,7 @@ def url():
     return url
 
 # Open tabs searching Bing
-for i in range(4):
+for i in range(32):
 
     # Open the URL in a new tab in the browser
     webbrowser.open(url())
