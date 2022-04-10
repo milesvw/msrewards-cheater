@@ -20,7 +20,7 @@ pyautogui.hotkey(metakey, 'space', interval=0.05)
 pyautogui.typewrite('edge')
 pyautogui.press('enter')
 
-time.sleep(6) # Give time for the browser to load
+time.sleep(10) # Give time for the browser to load
 
 for i in range(4):
     for j in range(8):
@@ -36,6 +36,9 @@ for i in range(4):
         pyautogui.press('enter')
 
         time.sleep(1.5) # Give time for the page to load
+
+    time.sleep(2)
+
     for j in range(8):
         pyautogui.hotkey(metakey, 'w', interval=0.05)
 
