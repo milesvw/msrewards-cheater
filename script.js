@@ -60,6 +60,7 @@ async function main() {
     const device = puppeteer.devices['iPhone X'];
     await page.emulate(device);
 
+    // Modify the user agent to make it seem like the searches are on an Edge browser and get extra points
     await page.setUserAgent('Mozilla/5.0 (iPhone; CPU iPhone OS 14_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 EdgiOS/46.3.7 Mobile/15E148 Safari/605.1.15');
 
     await page.goto(url());
